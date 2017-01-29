@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "dev": "browser-sync start --server --files=* --port=3001 --no-open --no-notify",
+    "deploy": "git push heroku master",
+    "postinstall": "gulp build"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "serve-static": "^1.11.1",
+    "gulp": "^3.9.1",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-replace": "^0.4.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5"
+  }
+}
