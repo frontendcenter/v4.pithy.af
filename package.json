@@ -2,7 +2,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "browser-sync start --server --files=* --port=3001 --no-open --no-notify",
-    "deploy": "git push heroku master",
+    "deploy": "git push heroku master && cfcli -d pithy.af purge http://v2.pithy.af",
     "postinstall": "gulp build"
   },
   "dependencies": {
