@@ -7,6 +7,26 @@
     <title>pithy.af</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      if (localStorage._tk_cache) {
+        document.documentElement.classList.add('wf-active')
+        const script = document.createElement('script')
+        script.innerHTML = `
+          /* FROM LOCAL STORAGE */
+          ${ localStorage._tk_cache };
+          Typekit.load({ async: false })
+        `
+        document.head.appendChild(script)
+      }
+      window._tk_onload = () => {
+        fetch("https://use.typekit.net/oqw6kuv.js").then(response => response.text())
+          .then(text => {
+            localStorage._tk_cache = text
+          })
+      }
+    </script>
+    <script async src="https://use.typekit.net/oqw6kuv.js"
+            onload="Typekit.load({ async: true, loading: window._tk_onload })"></script>
   </head>
   <body class="sans-serif">
     <nav class="Nav mb3">

@@ -120,9 +120,11 @@ html.wf-active .sans-serif {
     font-size: 2rem;
   }
 }
-/* Weirdly, this gets inherited as a pixel value not
-   recalculated at the higher font-size. */
 html:not(.wf-active) .Quote_Short {
+  /* Firefox and Safari treat font-weight 300 as Ultra Light (100) */
+  font-weight: 400;
+  /* Weirdly, this gets inherited as a pixel value not
+     recalculated at the higher font-size. */
   letter-spacing: -0.05em;
 }
 
