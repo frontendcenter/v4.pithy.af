@@ -109,6 +109,7 @@ html.wf-active .sans-serif {
   font-weight: 300;
   font-size: 3.25rem;
   line-height: 1.1;
+  white-space: pre-line;
 }
 @media (max-width: 40em) {
   .Quote_Short {
