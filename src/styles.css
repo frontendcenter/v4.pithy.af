@@ -32,8 +32,10 @@ html.wf-active .sans-serif {
   align-items: center;
   height: 3.5rem;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+  background-color: hsl(167, 70%, 60%);
 }
 
 .Nav > :first-child {
