@@ -1,30 +1,28 @@
 html {
   font-size: 16px;
 }
+
 @media (max-width: 24em) {
   html {
     font-size: 15px;
   }
 }
+
 @media (max-width: 20em) {
   html {
     font-size: 14px;
   }
 }
+
 html:not(.wf-active) .sans-serif {
   font-family: Avenir Next, sans-serif;
   letter-spacing: -0.05em;
   font-weight: 500;
 }
+
 html.wf-active .sans-serif {
   font-family: canada-type-gibson, Avenir Next, sans-serif;
   font-weight: 400;
-}
-
-.serif {
-}
-
-.Header {
 }
 
 .Nav {
@@ -34,8 +32,6 @@ html.wf-active .sans-serif {
   position: fixed;
   z-index: 2;
   width: 100%;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.1);
-  background-color: hsl(167, 70%, 60%);
 }
 
 .Nav > :first-child {
@@ -113,16 +109,19 @@ html.wf-active .sans-serif {
   line-height: 1.1;
   white-space: pre-line;
 }
+
 @media (max-width: 40em) {
   .Quote_Short {
     font-size: 2.5rem;
   }
 }
+
 @media (max-width: 30em) {
   .Quote_Short {
     font-size: 2rem;
   }
 }
+
 html:not(.wf-active) .Quote_Short {
   /* Firefox and Safari treat font-weight 300 as Ultra Light (100) */
   font-weight: 400;
@@ -141,15 +140,16 @@ html:not(.wf-active) .Quote_Short {
   padding: 0 0 0 0.5rem;
   margin-left: -0.5em;
 }
+
 html:not(.wf-active) .Quote_Short em {
   font-family: Palatino, serif;
   word-spacing: 0.1em;
   line-height: 1;
 }
+
 html.wf-active .Quote_Short em {
   font-family: freight-text-pro, Garamond, serif;
 }
-
 
 .Quote_Attribution {
   font-size: 1.25rem;
