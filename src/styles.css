@@ -30,8 +30,9 @@ html.wf-active .sans-serif {
   align-items: center;
   height: 3.5rem;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   width: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .Nav > :first-child {
@@ -72,27 +73,51 @@ html.wf-active .sans-serif {
   border-bottom: 2px solid white;
 }
 
-.Quote:nth-child(6n + 1) {
+.Quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@supports (mix-blend-mode: darken) {
+  .Quote::before {
+    z-index: 3;
+    mix-blend-mode: darken;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    height: 3.5rem;
+    width: 100%;
+    background: white;
+    z-index: 2;
+  }
+}
+
+.Quote:nth-child(6n + 1)::before {
   background-color: hsl(167, 70%, 60%);
 }
 
-.Quote:nth-child(6n + 2) {
+.Quote:nth-child(6n + 2)::before {
   background-color: hsl(185, 70%, 60%);
 }
 
-.Quote:nth-child(6n + 3) {
+.Quote:nth-child(6n + 3)::before {
   background-color: hsl(39, 75%, 75%);
 }
 
-.Quote:nth-child(6n + 4) {
+.Quote:nth-child(6n + 4)::before {
   background-color: hsl(333, 70%, 75%);
 }
 
-.Quote:nth-child(6n + 5) {
+.Quote:nth-child(6n + 5)::before {
   background-color: hsl(84, 70%, 75%);
 }
 
-.Quote:nth-child(6n + 6) {
+.Quote:nth-child(6n + 6)::before {
   background-color: hsl(270, 75%, 80%);
 }
 
@@ -103,7 +128,7 @@ html.wf-active .sans-serif {
 
 .Quote_Short {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   font-weight: 300;
   font-size: 3.25rem;
   line-height: 1.1;
